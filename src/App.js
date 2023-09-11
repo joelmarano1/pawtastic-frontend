@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Appointment from './components/Appointment';
+import Hero from './components/Hero';
+import NavBar from './components/NavBar';
+import Services from './components/Services';
+import { useRef } from 'react';
+// import Hero from './components/Hero'
 function App() {
+  const ref = useRef(0)
+  const handleScroll = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App mx-auto">
+      
+      <section className=" bg-container h-screen" style={{ backgroundImage:`linear-gradient(90deg,rgba(193,150, 190, .3),rgba(193,150, 190, .3)),url('img/dog-hero.jpg')`}}>
+        <NavBar forwardedRef={ref} />
+        <Hero/>
+      </section>
+       <Services forwardedRef={ref}/>
+       <Appointment/>
     </div>
   );
 }
