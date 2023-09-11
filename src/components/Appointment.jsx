@@ -63,7 +63,6 @@ const Appointment = () => {
     setService({...service  ,['times'] : JSON.stringify(times)});
  }
  const handleSubmit = () => {
-    alert(service.days.length)
    
     if(service.frequency == "" || service.start_date == "" || service.days.length <= 2 
     || service.times.length <= 2 ){
