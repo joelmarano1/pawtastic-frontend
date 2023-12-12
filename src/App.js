@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App mx-auto">
       
-      <section className=" bg-container h-screen" style={{ backgroundImage:`linear-gradient(90deg,rgba(193,150, 190, .3),rgba(193,150, 190, .3)),url('img/dog-hero.jpg')`}}>
+      <section className=" bg-container h-screen object-cover" style={{ backgroundImage:`linear-gradient(90deg,rgba(193,150, 190, .3),rgba(193,150, 190, .3)),url('img/dog-hero.jpg')`}}>
         <NavBar forwardedRef={ref} />
         <Hero/>
       </section>
